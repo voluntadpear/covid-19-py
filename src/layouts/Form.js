@@ -85,6 +85,7 @@ const Form = ({ filledState = {}, setFormState, form }) => {
 
   return (
     <FormBox>
+      <main>
       <form onSubmit={handleSubmit}>
         <>
           <Question
@@ -105,7 +106,7 @@ const Form = ({ filledState = {}, setFormState, form }) => {
         </>
         {status['pregnant'].show && (
           <>
-            <hr className="mb-5 mt-5" />
+            <hr className="mb-5 mt-5" aria-hidden={true} />
             <Question
               title={t('pregnant.question')}
               options={[
@@ -122,7 +123,7 @@ const Form = ({ filledState = {}, setFormState, form }) => {
         )}
         {status['age'].show && (
           <>
-            <hr className="mb-5 mt-5" />
+            <hr className="mb-5 mt-5" aria-hidden="true" />
             {/* TODO: Pull from age range */}
             <Question
               title={t('age.question')}
@@ -142,7 +143,7 @@ const Form = ({ filledState = {}, setFormState, form }) => {
         )}
         {status['breath'].show && (
           <>
-            <hr className="mb-5 mt-5" />
+            <hr className="mb-5 mt-5" aria-hidden={true} />
             <Question
               title={t('breath.question')}
               subTitle={t('breath.subtitle')}
@@ -160,7 +161,7 @@ const Form = ({ filledState = {}, setFormState, form }) => {
         )}
         {status['fever'].show && (
           <>
-            <hr className="mb-5 mt-5" />
+            <hr className="mb-5 mt-5" aria-hidden={true} />
             <Question
               title={t('fever.question')}
               options={[
@@ -181,7 +182,7 @@ const Form = ({ filledState = {}, setFormState, form }) => {
         )}
         {status['alarmSigns'].show && (
           <>
-            <hr className="mb-5 mt-5" />
+            <hr className="mb-5 mt-5" aria-hidden={true} />
             <Question
               title={t('alarmSigns.question')}
               subTitle={t('alarmSigns.subtitle')}
@@ -199,7 +200,7 @@ const Form = ({ filledState = {}, setFormState, form }) => {
         )}
         {status['riskGroup'].show && (
           <>
-            <hr className="mb-5 mt-5" />
+            <hr className="mb-5 mt-5" aria-hidden={true} />
             <Question
               title={t('riskGroup.question')}
               subTitle={t('riskGroup.subtitle')}
@@ -217,7 +218,7 @@ const Form = ({ filledState = {}, setFormState, form }) => {
         )}
         {status['healthProfessional'].show && (
           <>
-            <hr className="mb-5 mt-5" />
+            <hr className="mb-5 mt-5" aria-hidden={true} />
             <Question
               title={t('healthProfessional.question')}
               options={[
@@ -237,7 +238,7 @@ const Form = ({ filledState = {}, setFormState, form }) => {
         )}
         {status['professionalExposure'].show && (
           <>
-            <hr className="mb-5 mt-5" />
+            <hr className="mb-5 mt-5" aria-hidden={true} />
             <Question
               title={t('professionalExposure.question')}
               options={[
@@ -254,7 +255,7 @@ const Form = ({ filledState = {}, setFormState, form }) => {
         )}
         {status['familyExposure'].show && (
           <>
-            <hr className="mb-5 mt-5" />
+            <hr className="mb-5 mt-5" aria-hidden={true} />
             <Question
               title={t('familyExposure.question')}
               options={[
@@ -274,6 +275,7 @@ const Form = ({ filledState = {}, setFormState, form }) => {
           {t('submit')}
         </button>
       </form>
+      </main>
     </FormBox>
   )
 }
